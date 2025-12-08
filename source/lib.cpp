@@ -24,8 +24,8 @@ library::library()
     window.setView(view);
 
     ArrowShape arrow1({0,0});
-    auto c = Circle(1);
-    std::cout << calculateCentroid(c);
+    auto c = ConvexPolygon({{1,-1},{1,1},{-1,1},{-1,-1}});
+    std::cout << sizeof(Shape);
 
     while (window.isOpen())
     {

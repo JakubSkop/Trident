@@ -4,8 +4,10 @@
 #include <tuple>
 #include <memory>
 #include <variant>
+#include <iostream>
 
 #include "Engine/TypeConfiguration.hpp"
+
 
 namespace Trident{
 
@@ -59,7 +61,7 @@ std::vector<Trident::Vector2> GenerateVertices(T shape){
         Trident::Vector2 dir{std::cos(theta), std::sin(theta)};
         auto point = support(shape, dir);
 
-        if (vertices.empty() || point != vertices.back()){
+        if (vertices.empty() || (point != vertices.back() && point != vertices.front())){
             vertices.push_back(point);
         }
     }
@@ -107,4 +109,20 @@ Trident::Vector2 calculateCentroid(T& S){
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+template <class T>
+bool testConvexity(T& S){
+    auto vertices = GenerateVertices(S);
+
+    for (auto index = 1; index <= vertices.size(); index++){
+        auto v = vertices[index%vertices.size()];
+        auto next_v = vertices[(index+1)%vertices.size()];
+        auto prev_v = vertices[index-1];
+
+        if ((next_v - v).cross(prev_v - v) <= 0){
+            return false;
+        }
+    }
+
+    return true;
+};
 

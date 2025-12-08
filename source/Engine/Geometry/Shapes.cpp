@@ -1,14 +1,19 @@
 #include "Shapes.hpp"
 
 #include <numbers>
+#include <stdexcept>
 #include "Maths/LinAlg.hpp"
 
 using namespace Trident;
 
 ConvexPolygon::ConvexPolygon(std::vector<Trident::Vector2> ps) : points(ps){
+    static Scalar tolerance = 0.01;
     auto centroid = calculateCentroid(*this);
-    if (!approx_equal(centroid, {0,0}, 0.01)){
-        throw;
+    if (!approx_equal(centroid, {0,0}, tolerance)){
+        throw std::invalid_argument("Not centred on the origin");
+    }
+    if (!testConvexity(*this)){
+        throw std::invalid_argument("Not convex");
     }
 };
 
