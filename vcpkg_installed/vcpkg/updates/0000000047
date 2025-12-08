@@ -1,7 +1,0 @@
-Package: blaze
-Feature: lapack
-Depends: lapack
-Architecture: x64-windows
-Multi-Arch: same
-Description: LAPACK support
-Status: install ok half-installed
