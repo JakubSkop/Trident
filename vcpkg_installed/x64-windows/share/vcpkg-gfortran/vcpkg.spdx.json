@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-gfortran-x64-windows-3#3-6327d8f6-e419-465c-abe9-13a7a03db92e",
+  "name": "vcpkg-gfortran:x64-windows@3#3 4317f78bec650fbc63070a842ece9fdbe5ac81bb2be03cd40954ae8ba09e8553",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-02-25T01:15:33Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "vcpkg-gfortran",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "3#3",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@1af46bd54a9156a9f24fc7c8715488699522b382",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Metaport to install gfortran dependencies from msys if VCPKG_USE_EXTERNAL_Fortran is false",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "vcpkg-gfortran:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "4317f78bec650fbc63070a842ece9fdbe5ac81bb2be03cd40954ae8ba09e8553",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/vcpkg-gfortran/1af46bd54a9156a9f24fc7c8715488699522b382/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "25a5a988a19c41ca041d7820cff8461cf32c3daae3d4c6a438e0ec671c770de1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/vcpkg-gfortran/1af46bd54a9156a9f24fc7c8715488699522b382/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6a67d5f95cc7451537e2913459140e8eb1a66779242b8247957473fb9486ca3a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

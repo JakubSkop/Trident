@@ -1,0 +1,6 @@
+Package: blaze
+Feature: openmp
+Architecture: x64-windows
+Multi-Arch: same
+Description: OpenMP support
+Status: install ok installed

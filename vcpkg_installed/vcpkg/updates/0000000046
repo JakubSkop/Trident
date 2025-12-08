@@ -1,0 +1,10 @@
+Package: blaze
+Version: 3.8.2
+Port-Version: 1
+Depends: boost-exception, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: abc44b06b718bfa5fe7f623fc37a52a056b71e04b3f57fa98ba5e0f3e433bac5
+Description: Blaze is an open-source, high-performance C++ math library for dense and sparse arithmetic.
+Default-Features: lapack, openmp
+Status: install ok half-installed

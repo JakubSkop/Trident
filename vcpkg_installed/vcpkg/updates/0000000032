@@ -1,0 +1,9 @@
+Package: boost-assert
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 35c1bb0568011f07a48b1877acbd45d8110bf8fafe9421d174337c24d072ed6d
+Description: Boost assert module
+Status: install ok half-installed

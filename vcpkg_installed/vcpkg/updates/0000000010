@@ -1,0 +1,10 @@
+Package: lapack-reference
+Version: 3.11.0
+Port-Version: 6
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-gfortran
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 501625518197526df3c20687eb341a5ae14df14ff47dd37aabb5774df914e52c
+Description: LAPACK - Linear Algebra PACKage
+Default-Features: blas-select
+Status: install ok half-installed

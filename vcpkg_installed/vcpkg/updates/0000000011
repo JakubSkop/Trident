@@ -1,0 +1,6 @@
+Package: lapack-reference
+Feature: blas-select
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use external optimized BLAS
+Status: install ok half-installed

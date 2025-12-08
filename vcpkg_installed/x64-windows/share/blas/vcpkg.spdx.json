@@ -1,0 +1,139 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/blas-x64-windows-2023-04-14#1-e1a452f9-c467-4d01-8c19-893d27243cc1",
+  "name": "blas:x64-windows@2023-04-14#1 5ea77b4e8ff9274ad751e8e530245c4d473b0fbfebc67b56b7bc7f983e499d21",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-02-25T01:15:28Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "blas",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2023-04-14#1",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@996094c62f01e190855a43a036b6ec2e10375bd9",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Metapackage for packages which provide BLAS",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "blas:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "5ea77b4e8ff9274ad751e8e530245c4d473b0fbfebc67b56b7bc7f983e499d21",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/blas/996094c62f01e190855a43a036b6ec2e10375bd9/blas.pc.in",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ce4fb9934794be7a59d7f0336a5af5278a3a717abd11cebd0410c84469e08752"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/blas/996094c62f01e190855a43a036b6ec2e10375bd9/portfile.cmake",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ab0d347e6231dffbfdd067dae3db2a24ede0e2978f252d97336ed212d8804fca"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/blas/996094c62f01e190855a43a036b6ec2e10375bd9/vcpkg-cmake-wrapper.cmake.in",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e1c23ffe106b6a679d450a8048ffb021538aa05b066c2b9d0cc4e60644026529"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/blas/996094c62f01e190855a43a036b6ec2e10375bd9/vcpkg.json",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ec4770881d0507c522133a3f70f4a5c620c33ad228c48e9387f9d793fe5e7c92"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/lapack-x64-windows-2023-06-10#2-c496d5c3-1d28-4d52-aac9-245012c8c4e2",
+  "name": "lapack:x64-windows@2023-06-10#2 6b7b1b3057b6a96649f3bbd7ddf401a722f357ce47e8e9a0233d4448c3089c4b",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-02-25T01:22:15Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "lapack",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2023-06-10#2",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@629522c4a52d924f0eeda0974bcf74c7d8f024fb",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Metapackage for packages which provide LAPACK",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "lapack:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "6b7b1b3057b6a96649f3bbd7ddf401a722f357ce47e8e9a0233d4448c3089c4b",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/lapack/629522c4a52d924f0eeda0974bcf74c7d8f024fb/lapack.pc.in",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "24660664fdb117f3f44b58d5478602f1b8c6352e1755b13c0288d00ed8079b8e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/lapack/629522c4a52d924f0eeda0974bcf74c7d8f024fb/portfile.cmake",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "99b76b1f14253d99b578037939a563e2ddfdeb7ed054e57e1dbab0999be5b27c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/lapack/629522c4a52d924f0eeda0974bcf74c7d8f024fb/vcpkg-cmake-wrapper.cmake.in",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4b8827d8e70315b6f0ee829b1ab32a7705f7edd1b34f2e1cf09d0e7d8252c912"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/jakub/Documents/Development/VCPKG/vcpkg/buildtrees/versioning_/versions/lapack/629522c4a52d924f0eeda0974bcf74c7d8f024fb/vcpkg.json",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1cf24b2c96b1508b239816281087a564a09c2beae21741f3797e77073e1c493b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
