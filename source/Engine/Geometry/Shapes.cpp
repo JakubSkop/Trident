@@ -8,11 +8,11 @@ using namespace Trident;
 
 ConvexPolygon::ConvexPolygon(std::vector<Trident::Vector2> ps) : points(ps){
     static Scalar tolerance = 0.01;
-    auto centroid = calculateCentroid(*this);
+    auto centroid = CalculateCentroid(*this);
     if (!approx_equal(centroid, {0,0}, tolerance)){
         throw std::invalid_argument("Not centred on the origin");
     }
-    if (!testConvexity(*this)){
+    if (!TestConvexity(*this)){
         throw std::invalid_argument("Not convex");
     }
 };
@@ -22,6 +22,10 @@ const std::vector<Vector2>& ConvexPolygon::getPoints() const{
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+Trident::Vector2 support(Trident::Line shape, Trident::Vector2 dir){
+    return (dir.dot(shape.radialDir) > 0) ? shape.radialDir : -shape.radialDir;
+}
 
 Trident::Vector2 support(Trident::Circle shape, Trident::Vector2 dir){
     return dir.normalized() * shape.radius;
@@ -44,6 +48,6 @@ Trident::Vector2 support(Trident::ConvexPolygon shape, Trident::Vector2 dir){
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-Trident::Scalar calculateArea(Trident::Circle shape, Trident::Vector2 dir){
+Trident::Scalar CalculateArea(Trident::Circle shape, Trident::Vector2 dir){
     return shape.radius * shape.radius * std::numbers::pi_v<Trident::Scalar>;
 }

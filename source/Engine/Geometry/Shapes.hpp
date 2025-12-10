@@ -7,12 +7,21 @@
 #include <iostream>
 
 #include "Engine/TypeConfiguration.hpp"
+#include "Engine/Typelist.hpp"
 
 
 namespace Trident{
 
+    struct Line{
+        Trident::Vector2 radialDir;
+    };
+
     struct Circle{
         Trident::Scalar radius;
+    };
+
+    class Ellipse{
+        Trident::Matrix2 transformation;
     };
 
     class ConvexPolygon{
@@ -32,16 +41,18 @@ namespace Trident{
             };
     };
 
-    using Shape = std::variant<Circle, ConvexPolygon, SupportFunctor>;
+    using shapes_t = Caravan::Typelist<Line, Circle, ConvexPolygon, SupportFunctor>;
+    using Shape = Caravan::bundle<shapes_t, std::variant>;
 
     struct ShapeContainer{
-        std::tuple<std::vector<Circle>, std::vector<ConvexPolygon>, std::vector<SupportFunctor>> shapeLists;
+        Caravan::bundle<Caravan::compose<shapes_t, std::vector>, std::tuple> shapeLists;
     };
 
 }
 
 ///////////////////////////////////////////////////////////
 
+Trident::Vector2 support(Trident::Line shape, Trident::Vector2 dir);
 Trident::Vector2 support(Trident::Circle shape, Trident::Vector2 dir);
 Trident::Vector2 support(Trident::ConvexPolygon shape, Trident::Vector2 dir);
 
@@ -70,10 +81,10 @@ std::vector<Trident::Vector2> GenerateVertices(T shape){
 
 ////////////////////////////////////////////////////////////////////////////
 
-Trident::Scalar calculateArea(Trident::Circle shape, Trident::Vector2 dir);
+Trident::Scalar CalculateArea(Trident::Circle shape, Trident::Vector2 dir);
 
 template <class T>
-Trident::Scalar calculateArea(T& S){
+Trident::Scalar CalculateArea(T& S){
     auto vertices = GenerateVertices(S);
     Trident::Scalar area{0};
 
@@ -88,7 +99,7 @@ Trident::Scalar calculateArea(T& S){
 ////////////////////////////////////////////////////////////////////////////
 
 template <class T>
-Trident::Vector2 calculateCentroid(T& S){
+Trident::Vector2 CalculateCentroid(T& S){
     auto vertices = GenerateVertices(S);
     Trident::Vector2 centroid{0,0};
     Trident::Scalar doubleArea{0};
@@ -110,7 +121,7 @@ Trident::Vector2 calculateCentroid(T& S){
 /////////////////////////////////////////////////////////////////////////////////////////
 
 template <class T>
-bool testConvexity(T& S){
+bool TestConvexity(T& S){
     auto vertices = GenerateVertices(S);
 
     for (auto index = 1; index <= vertices.size(); index++){

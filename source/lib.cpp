@@ -4,6 +4,7 @@
 #include "Graphics/Arrow.hpp"
 #include "Engine/Collision/NarrowPhase.hpp"
 #include "Conversions.hpp"
+#include "Engine/Typelist.hpp"
 
 #include <iostream>
 #include <map>
@@ -25,7 +26,22 @@ library::library()
 
     ArrowShape arrow1({0,0});
     auto c = ConvexPolygon({{1,-1},{1,1},{-1,1},{-1,-1}});
-    std::cout << sizeof(Shape);
+
+    using empty = Caravan::Typelist<>;
+    using floatingTypes = Caravan::Typelist<float, double>;
+    using integralTypes = Caravan::Typelist<short, int, long>;
+    using doubledIntegralTypes = Caravan::add<integralTypes, integralTypes>;
+    using noInts = Caravan::remove<Caravan::Typelist<>, int>;
+    using N = Caravan::removeDuplicates<doubledIntegralTypes>;
+    using K = Caravan::select<N, 0,2>;
+    using L = Caravan::slice<doubledIntegralTypes,2,4>;
+    using P = Caravan::pop<doubledIntegralTypes,1,2,3>;
+    using B = Caravan::bundle<integralTypes, std::tuple>;
+    using U = Caravan::unbundle<B>;
+    using C = Caravan::compose<integralTypes, std::vector, std::optional>;
+    using D = Caravan::decompose<C, std::optional>;
+    //Caravan::print<D>();
+    std::cout << Caravan::compareEqual<integralTypes,integralTypes>();
 
     while (window.isOpen())
     {

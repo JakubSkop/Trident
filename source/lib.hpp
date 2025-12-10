@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <array>
 
 /**
  * @brief The core implementation of the executable

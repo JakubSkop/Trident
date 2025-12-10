@@ -4,10 +4,14 @@
 
 
 class Collider{
-    Shape shape;
+    Trident::Shape shape;
     Trident::Matrix2 localtransform;
     Trident::Vector2 localtranslation;
 
-    Collider(Shape s);
+    Trident::Scalar frictionCoefficient;
+    Trident::Scalar RestitutionCoefficient;
+    Trident::Scalar density;
+
+    Collider(Trident::Shape s);
 
 };
