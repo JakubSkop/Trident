@@ -3,6 +3,7 @@
 #include <vector>
 #include <tuple>
 #include <memory>
+#include <unordered_map>
 #include <variant>
 #include <iostream>
 
@@ -22,6 +23,16 @@ namespace Trident{
 
     class Ellipse{
         Trident::Matrix2 transformation;
+
+        public:
+            Ellipse();
+            Ellipse(Trident::Matrix2 m);
+            Ellipse(Trident::Scalar width, Trident::Scalar height);
+            Ellipse(Trident::Vector2 majorAxis, Trident::Scalar minorAxisScaleFactor);
+
+        
+        
+
     };
 
     class ConvexPolygon{
@@ -44,8 +55,9 @@ namespace Trident{
     using shapes_t = Caravan::Typelist<Line, Circle, ConvexPolygon, SupportFunctor>;
     using Shape = Caravan::bundle<shapes_t, std::variant>;
 
-    struct ShapeContainer{
-        Caravan::bundle<Caravan::compose<shapes_t, std::vector>, std::tuple> shapeLists;
+    class Shape_SoA{
+        std::vector<Shape> shapes;
+        std::unordered_map<std::string, size_t> shapeNameMap;
     };
 
 }
@@ -55,7 +67,6 @@ namespace Trident{
 Trident::Vector2 support(Trident::Line shape, Trident::Vector2 dir);
 Trident::Vector2 support(Trident::Circle shape, Trident::Vector2 dir);
 Trident::Vector2 support(Trident::ConvexPolygon shape, Trident::Vector2 dir);
-
 inline Trident::Vector2 support(Trident::SupportFunctor f, Trident::Vector2 dir){
     return f(dir);
 }
@@ -65,7 +76,7 @@ inline Trident::Vector2 support(Trident::SupportFunctor f, Trident::Vector2 dir)
 template <typename T>
 std::vector<Trident::Vector2> GenerateVertices(T shape){
     static const int numSamples = 30;
-    std::vector<Trident::Vector2> vertices{};
+    std::vector<Trident::Vector2> vertices;
     for (auto i = 0; i < numSamples; i += 1 ){
 
         auto theta = i*2*std::numbers::pi/numSamples;

@@ -2,6 +2,24 @@
 
 using namespace Trident;
 
-Collider::Collider(Shape s) : shape(s){
-    
-};
+const auto& Collider_SoA::getShapeIndices() const{
+    return shapeIndices;
+}
+const auto& Collider_SoA::getbodyIndices() const{
+    return bodyIndices;
+}
+const auto& Collider_SoA::getLocalTransforms() const{
+    return localTransforms;
+}
+const auto& Collider_SoA::getLocalTranslations() const{
+    return localTranslations;
+}
+const auto& Collider_SoA::getFrictionCoefficients() const{
+    return frictionCoefficients;
+}
+const auto& Collider_SoA::getRestitutionCoefficients() const{
+    return restitutionCoefficients;
+}
+const auto& Collider_SoA::getDensities() const{
+    return densities;
+}
