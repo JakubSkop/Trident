@@ -30,9 +30,6 @@ namespace Trident{
             Ellipse(Trident::Scalar width, Trident::Scalar height);
             Ellipse(Trident::Vector2 majorAxis, Trident::Scalar minorAxisScaleFactor);
 
-        
-        
-
     };
 
     class ConvexPolygon{

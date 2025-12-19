@@ -8,6 +8,9 @@ const auto& Collider_SoA::getShapeIndices() const{
 const auto& Collider_SoA::getbodyIndices() const{
     return bodyIndices;
 }
+const auto& Collider_SoA::getEntities() const{
+    return entities;
+}
 const auto& Collider_SoA::getLocalTransforms() const{
     return localTransforms;
 }
@@ -23,3 +26,9 @@ const auto& Collider_SoA::getRestitutionCoefficients() const{
 const auto& Collider_SoA::getDensities() const{
     return densities;
 }
+const auto& Collider_SoA::getCategoryMasks() const{
+    return categoryMasks;
+};
+const auto& Collider_SoA::getCollisionMasks() const{
+    return collisionMasks;
+};
